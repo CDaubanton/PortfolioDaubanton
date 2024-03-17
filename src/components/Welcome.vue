@@ -36,6 +36,7 @@
                 <div class="column ">
                     <div class="creation">
                         <h1 class="textCreation">Shitposting</h1>
+
                         <img id="shitpost" src="../assets/creations/shitpost.jpg">
                     </div>
                 </div>
@@ -55,6 +56,7 @@
     background-color: #272727;
     color: white;
     text-align: center;
+    font-family: Raleway;
 }
 
 .descText {
@@ -84,6 +86,8 @@
     position: absolute;
     bottom: -10px;
     left: 15px;
+    z-index: 2;
+    font-family: Raleway;
 }
 
 .row {
@@ -106,10 +110,31 @@
     position: relative;
     text-align: center;
     color: white;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+    display:inline-block;
+}
+
+.creation:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+
+.creation:hover {
+    transition: all .3s ease-in;
+    transform: scale(1.2);
+    z-index: 3;
 }
 
 .creation img {
     width: 500px;
+    display:block;
     height: auto;
 }
 </style>

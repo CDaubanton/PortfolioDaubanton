@@ -21,11 +21,12 @@
   <RouterView id="content"/>
 
   <footer>
-        <ul id="social-icons">
-            <li><a href="https://github.com/CDaubanton/" target="_blank">GitHub</a></li>
-            <li><a href="https://www.twitter.com/mady2ouf" target="_blank">Twitter</a>
+    <ul id="social-icons">
+            <li><a href="https://github.com/CDaubanton/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.twitter.com/mady2ouf" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
-            <li><a href="https://www.linkedin.com/in/clément-daubanton-852aa6295" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/clément-daubanton-852aa6295" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
         </ul>
         <p>Dernière mise à jour le 17 Mars 2024</p>
     </footer>
@@ -35,7 +36,8 @@
 <style scoped>
 
 header {
-  z-index: 1;
+  font-family: Raleway;
+  z-index: 4;
   top: 0;
   width: 100%;
   position: fixed;
@@ -94,4 +96,16 @@ footer {
     
 }
 
+#social-icons i{
+    text-decoration: none;
+    color: white;
+}
+
+#social-icons a {
+    font-size: 2em;
+}
+
+#social-icons a:hover {
+    opacity: 0.8;
+}
 </style>
