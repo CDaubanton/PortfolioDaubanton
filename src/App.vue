@@ -12,8 +12,7 @@
     <div class="wrapper">
       <nav id="navBar">
         <a id="logo" v-on:click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
-        <a id="Home"><RouterLink to="/" >Acceuil</RouterLink></a>
-        <a id="modal"><RouterLink to="/modal">A propos</RouterLink></a>
+        <a id="Home"><RouterLink to="/" >Home</RouterLink></a>
       </nav>
     </div>
   </header>
@@ -28,12 +27,13 @@
             <li><a href="https://www.linkedin.com/in/clément-daubanton-852aa6295" target="_blank"><i
                         class="fa-brands fa-linkedin"></i></a></li>
         </ul>
-        <p>Dernière mise à jour le 17 Mars 2024</p>
+        <p>Last update : March 19th 2024</p>
     </footer>
 
 </template>
 
 <style scoped>
+
 header {
   font-family: Raleway;
   z-index: 4;
@@ -74,7 +74,7 @@ header {
 }
 
 footer {
-  background-color: rgb(0, 134, 29);
+    background-color: #8B41F5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +85,11 @@ footer {
     font-family: Raleway;
 }
 
+footer p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 #social-icons {
     width: 150px;
     display: flex;
@@ -92,6 +97,7 @@ footer {
     list-style: none;
     padding: 0;
     justify-content: space-between;
+    
     
 }
 
