@@ -1,8 +1,8 @@
 <script setup>
-  import { RouterLink, RouterView } from 'vue-router'
+  import { RouterLink, RouterView } from 'vue-router';
 
   function scrollOnTop() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 
@@ -13,7 +13,7 @@
       <nav id="navBar">
         <a id="logo" v-on:click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
         <a id="Home"><RouterLink to="/" >Acceuil</RouterLink></a>
-        <a id="about"><RouterLink to="/about">A propos</RouterLink></a>
+        <a id="modal"><RouterLink to="/modal">A propos</RouterLink></a>
       </nav>
     </div>
   </header>
@@ -34,7 +34,6 @@
 </template>
 
 <style scoped>
-
 header {
   font-family: Raleway;
   z-index: 4;
