@@ -1,5 +1,7 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router';
+  import PortfolioView from './views/PortfolioView.vue';
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
   function scrollOnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -11,13 +13,15 @@
   <header>
     <div class="wrapper">
       <nav id="navBar">
-        <a id="logo" v-on:click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
-        <a id="Home"><RouterLink to="/" >Home</RouterLink></a>
+        <a id="logo" @click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
+        <a href="#description" id="Home">Home</a>
+        <a href="#carrousel" id="creations">Creations</a>
+        <a href="#contactForm" id="contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <RouterView id="content"/>
+  <PortfolioView id="content"/>
 
   <footer>
     <ul id="social-icons">
@@ -41,6 +45,10 @@ header {
   width: 100%;
   position: fixed;
   background-color: black;
+}
+
+#Home {
+  cursor: pointer;
 }
 
 #navBar {
@@ -70,7 +78,7 @@ header {
 }
 
 #content {
-  padding-top: 102px;
+  margin-top: 102px;
 }
 
 footer {

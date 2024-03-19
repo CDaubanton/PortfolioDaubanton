@@ -254,6 +254,10 @@ function openShistpostModal() {
             </div>
         </div>
     </div>
+
+    <div id="contactForm">
+
+    </div>
 </template>
 
 <style>
@@ -268,6 +272,7 @@ function openShistpostModal() {
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-top: 102px;
     background-image: linear-gradient(to top, rgba(20, 20, 20, 1) 10%, rgba(0, 0, 0, 0)),
         url("../assets/fond.png");
     color: white;
@@ -302,10 +307,12 @@ function openShistpostModal() {
     background-color: #141414;
     padding-left: 20%;
     padding-right: 20%;
+    margin-bottom: 30px;
 }
 
 #creations {
     padding: 15px;
+
 
 }
 
@@ -326,8 +333,8 @@ function openShistpostModal() {
 
 .textCreation {
     position: absolute;
-    bottom: 0;
-    left: 15px;
+    bottom: 15px;
+    left: 30px;
     z-index: 2;
     font-family: Raleway;
     font-size: 30px;
@@ -447,6 +454,7 @@ function openShistpostModal() {
     transform: scale(1);
     display: inline-block;
     cursor: pointer;
+    
 }
 
 .creation:after {
@@ -457,13 +465,15 @@ function openShistpostModal() {
     width: 100%;
     height: 100%;
     display: inline-block;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 90%);
+    border-radius: 50px;
 }
 
 .creation:hover {
     transition: all .3s ease-in;
     transform: scale(1.2);
     z-index: 3;
+    border-radius: 50px;
 }
 
 
@@ -471,5 +481,7 @@ function openShistpostModal() {
     width: 30em;
     display: block;
     height: auto;
+    border-radius: 50px;
+    
 }
 </style>
