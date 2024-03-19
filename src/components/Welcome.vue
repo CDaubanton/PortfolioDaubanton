@@ -1,28 +1,30 @@
-<script>
+<script setup>
+
 
 </script>
 
 <template>
     <div id="description">
-        <img id="face" src="../assets/face.png" />
+        <img id="face" alt="Le visage de Maddy" src="../assets/face.png">
         <h1 class="descText">Bienvenue sur mon Portfolio</h1>
         <h2 class="descText">Salut c'est Maddy Daubanton, dev web junior, vous pourrez trouver mes differentes créations
             ! C'est tout ce que je fais en ce moment.</h2>
     </div>
 
+
     <div id="carrousel">
-        <div id="creations">
+        <div id="creations" >
             <div class="row">
                 <div class="column ">
                     <div class="creation">
                         <h1 class="textCreation">BadeBot</h1>
-                        <img id="badebot" src="../assets/creations/badebot.jpg">
+                        <img id="badebot" alt="Conversation Discord entre BadeBot et un utilisateur" src="../assets/creations/badebot.jpg">
                     </div>
                 </div>
                 <div class="column ">
                     <div class="creation">
                         <h1 class="textCreation">3D Modeling</h1>
-                        <img id="donut" src="../assets/creations/donut.gif">
+                        <img id="donut" alt="Une image animée d'un donut" src="../assets/creations/donut.gif">
                     </div>
                 </div>
             </div>
@@ -30,13 +32,14 @@
                 <div class="column ">
                     <div class="creation">
                         <h1 class="textCreation">Streaming</h1>
-                        <img id="stream" src="../assets/creations/stream.gif">
+                        <img id="stream" alt="Extrait de stream de Maddy" src="../assets/creations/stream.gif">
                     </div>
                 </div>
                 <div class="column ">
                     <div class="creation">
                         <h1 class="textCreation">Shitposting</h1>
-                        <img id="shitpost" src="../assets/creations/shitpost.jpg">
+
+                        <img id="shitpost" alt="Image d'un gros Luma avec écrit 'Elle a déjà mangée et elle mange avec nous'" src="../assets/creations/shitpost.jpg">
                     </div>
                 </div>
             </div>
@@ -55,6 +58,7 @@
     background-color: #272727;
     color: white;
     text-align: center;
+    font-family: Raleway;
 }
 
 .descText {
@@ -70,7 +74,7 @@
 }
 
 #carrousel {
-    background-color: #272727;
+    background-color: #141414;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -84,6 +88,8 @@
     position: absolute;
     bottom: -10px;
     left: 15px;
+    z-index: 2;
+    font-family: Raleway;
 }
 
 .row {
@@ -106,10 +112,32 @@
     position: relative;
     text-align: center;
     color: white;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+    display:inline-block;
+    cursor: pointer;
 }
 
+.creation:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+
+.creation:hover {
+    transition: all .3s ease-in;
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+
 .creation img {
-    width: 500px;
+    width: 30em;
+    display:block;
     height: auto;
 }
 </style>
