@@ -1,6 +1,5 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router';
-  import PortfolioView from './views/PortfolioView.vue';
 
   function scrollOnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -8,9 +7,10 @@
 </script>
 
 <template>
-
+<!-- Le Header restera sur toutes les pages -->
   <header>
     <div class="wrapper">
+
       <nav id="navBar">
         <a id="logo"  @click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
         <a href="/#description" id="Home">Home</a>
@@ -19,9 +19,10 @@
       </nav>
     </div>
   </header>
-
+<!-- On utilise la vue du Router, quand on va sur une page autre que celle prévue par défaut, la page 404 apparait -->
   <RouterView />
 
+  <!-- Le footer reste le même sur toutes les pages -->
   <footer>
     <ul id="social-icons">
             <li><a href="https://github.com/CDaubanton/" target="_blank"><i class="fa-brands fa-github"></i></a></li>

@@ -1,4 +1,5 @@
 <template>
+  <!-- Création du formulaire de contact -->
   <div id="contactForm">
     <h1> Contact Form</h1>
     <form ref="form" @submit.prevent="sendEmail">
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+// On utilise EmailJS pour recevoir les mails directement depuis le formulaire
 import emailjs from '@emailjs/browser';
 
 export default {
@@ -21,10 +23,11 @@ export default {
     scrollOnTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
+    // Il faut créer un compte sur https://dashboard.emailjs.com/sign-in, le tutoriel complet est sur https://www.emailjs.com/docs/tutorial/overview/.
     sendEmail() {
       emailjs
-        .sendForm('service_vs8fof5', 'template_yert83j', this.$refs.form, {
-          publicKey: 'QolPIdDpvrrsd4WY-',
+        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
+          publicKey: 'YOUR_PUBLIC_KEY',
         })
         .then(
           () => {

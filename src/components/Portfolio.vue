@@ -40,7 +40,7 @@ function openShistpostModal() {
 </script>
 
 <template>
-    <div id="description">
+    <div id="description"><!-- La description avec ma tête et une petite description -->
         <img id="face" alt="Le visage de Maddy" src="../assets/face.png">
         <h1 class="descText">Welcome on my Portfolio</h1>
         <h2 class="descText">My name is Madeline Daubanton, and I'm currently 21 years old. I call a small apartment my
@@ -48,51 +48,53 @@ function openShistpostModal() {
             enjoyment from them.</h2>
     </div>
 
-    <div id="carrousel">
+    <div id="carrousel"> <!-- Le Carrousel des differentes créations -->
         <div id="creations">
-            <div class="row">
+            <div class="row"> <!-- La première ligne de création-->
                 <div class="column ">
-                    <div class="creation" @click="openBadeModal">
-                        <TransitionRoot appear :show="isBadeOpen" as="template">
-                            <Dialog as="div" @close="closeBadeModal" class="relative z-10">
+                    <div class="creation" @click="openBadeModal"> <!-- Création du Modal BadeBot avec HeadlessUI et TailwindCss -->
+                        <TransitionRoot appear :show="isBadeOpen" as="template"> <!-- Quand isBadeOpen est true, la transition est initié, faisant apparaitre le modal-->
+                            <Dialog as="div" @close="closeBadeModal" class="relative z-10"> 
                                 <TransitionChild as="template" enter="duration-300 ease-out" enter-from="opacity-0"
                                     enter-to="opacity-100" leave="duration-200 ease-in" leave-from="opacity-100"
                                     leave-to="opacity-0">
                                     <div class="fixed inset-0 bg-black/25" />
-                                </TransitionChild>
+                                </TransitionChild> <!-- En entré, elle dure 300 ms, d'une opacité de 0 à 100, en sortie, elle dure 200ms, d'une opacité de 100 à 0-->
 
                                 <div class="fixed inset-0 overflow-y-auto">
                                     <div class="flex min-h-full items-center justify-center p-4 text-center">
                                         <TransitionChild as="template" enter="duration-300 ease-out"
                                             enter-from="opacity-0 scale-95" enter-to="opacity-100 scale-100"
                                             leave="duration-200 ease-in" leave-from="opacity-100 scale-100"
-                                            leave-to="opacity-0 scale-95">
+                                            leave-to="opacity-0 scale-95"> <!-- Une autre transition, qui fait un effet de zoom sur le Modal -->
                                             <DialogPanel class="modalPanel">
-                                                <DialogTitle as="h3" class="text-3xl font-medium leading-6 text-white">
+                                                <DialogTitle as="h3" class="text-3xl font-medium leading-6 text-white"> <!-- Le titre du Modal-->
                                                     BadeBot
                                                 </DialogTitle>
-                                                <div class="mt-2">
+                                                <div class="mt-2"> <!-- La description, en anglais, de la création -->
                                                     <p class="text-base text-gray-100">During 2022, I embarked on the
                                                         development of a Discord bot with a primary goal of bringing
                                                         laughter through what's commonly known as "shitposting." This
                                                         bot was meticulously crafted using JavaScript, specifically
                                                         powered by Node.js, and it made extensive use of the DiscordJS
                                                         V14 library.</p>
-                                                    <p class="text-xl"><i class="fa-brands fa-js text-yellow-500"></i>
+                                                    <p class="text-xl"><i class="fa-brands fa-js text-yellow-500"></i> 
                                                         <i class="fa-brands fa-node text-green-500"></i> <i
                                                             class="fa-brands fa-discord text-blue-400"></i>
-                                                    </p>
-                                                    <div class="modalImages">
+                                                    </p> <!-- Ce sont les icones utilisés, ici JS, Node JS et le Logo de Discord pour la bibliotheque DiscordJS -->
+                                                    <div class="modalImages"> <!-- Ce sont les images qui sont dans le modal, de bas en haut-->
                                                         <img id="badebot"
                                                             alt="Conversation Discord entre BadeBot et un utilisateur"
-                                                            src="../assets/creations/badebot.jpg">
-                                                    </div>
-
+                                                            src="../assets/creations/badebot.jpg"> 
+                                                    </div> 
+                                                    <!-- C'est le bouton utilisé pour accéder au repo GitHub de BadeBot -->
                                                     <a href="https://github.com/Minkavi/BadeBot" target="_blank"><button
-                                                            type="button" class="modalGitBtn">Git Link</button></a>
+                                                            type="button" class="modalGitBtn">Git Link</button></a> 
+                                                            
                                                 </div>
 
                                                 <div class="mt-4">
+                                                    <!-- Un bouton pour fermer le modal -->
                                                     <button type="button" class="modalCloseBtn" @click="closeBadeModal">
                                                         Close
                                                     </button>
@@ -108,6 +110,7 @@ function openShistpostModal() {
                             src="../assets/creations/badebot.jpg">
                     </div>
                 </div>
+                <!-- L'explication pour les autres modals sont exactement les même -->
                 <div class="column ">
                     <div class="creation" @click="open3dModal">
                         <TransitionRoot appear :show="is3dOpen" as="template">
@@ -271,13 +274,10 @@ function openShistpostModal() {
             </div>
         </div>
     </div>
-
-    <div id="contactForm">
-
-    </div>
 </template>
 
 <style>
+/* Initialisation  du framework css TailwindCss*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -316,7 +316,7 @@ function openShistpostModal() {
 #face {
     width: 200px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50px;
     box-shadow: 0 0 10px white;
 }
 
