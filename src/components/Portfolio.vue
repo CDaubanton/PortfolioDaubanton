@@ -43,7 +43,9 @@ function openShistpostModal() {
     <div id="description">
         <img id="face" alt="Le visage de Maddy" src="../assets/face.png">
         <h1 class="descText">Welcome on my Portfolio</h1>
-        <h2 class="descText">My name is Madeline Daubanton, and I'm currently 21 years old. I call a small apartment my home, where I passionately craft various creations for people to discover. I genuinely hope you derive enjoyment from them.</h2>
+        <h2 class="descText">My name is Madeline Daubanton, and I'm currently 21 years old. I call a small apartment my
+            home, where I passionately craft various creations for people to discover. I genuinely hope you derive
+            enjoyment from them.</h2>
     </div>
 
     <div id="carrousel">
@@ -70,7 +72,12 @@ function openShistpostModal() {
                                                     BadeBot
                                                 </DialogTitle>
                                                 <div class="mt-2">
-                                                    <p class="text-base text-gray-100">During 2022, I embarked on the development of a Discord bot with a primary goal of bringing laughter through what's commonly known as "shitposting." This bot was meticulously crafted using JavaScript, specifically powered by Node.js, and it made extensive use of the DiscordJS V14 library.</p>
+                                                    <p class="text-base text-gray-100">During 2022, I embarked on the
+                                                        development of a Discord bot with a primary goal of bringing
+                                                        laughter through what's commonly known as "shitposting." This
+                                                        bot was meticulously crafted using JavaScript, specifically
+                                                        powered by Node.js, and it made extensive use of the DiscordJS
+                                                        V14 library.</p>
                                                     <p class="text-xl"><i class="fa-brands fa-js text-yellow-500"></i>
                                                         <i class="fa-brands fa-node text-green-500"></i> <i
                                                             class="fa-brands fa-discord text-blue-400"></i>
@@ -82,12 +89,12 @@ function openShistpostModal() {
                                                     </div>
 
                                                     <a href="https://github.com/Minkavi/BadeBot" target="_blank"><button
-                                                            type="button" class="modalGitBtn">Lien du Repo</button></a>
+                                                            type="button" class="modalGitBtn">Git Link</button></a>
                                                 </div>
 
                                                 <div class="mt-4">
                                                     <button type="button" class="modalCloseBtn" @click="closeBadeModal">
-                                                        Fermer
+                                                        Close
                                                     </button>
                                                 </div>
                                             </DialogPanel>
@@ -122,7 +129,10 @@ function openShistpostModal() {
                                                     3D Modeling
                                                 </DialogTitle>
                                                 <div class="mt-2">
-                                                    <p class="text-base text-gray-100">Out of sheer boredom one day, I delved into the world of 3D modeling. I quickly fell in love with the incredible ability to fashion things from the ground up and eagerly share them with the world.<br>
+                                                    <p class="text-base text-gray-100">Out of sheer boredom one day, I
+                                                        delved into the world of 3D modeling. I quickly fell in love
+                                                        with the incredible ability to fashion things from the ground up
+                                                        and eagerly share them with the world.<br>
                                                         <i class="fa-solid fa-cube text-xl text-orange-500"></i> Blender
                                                     </p>
                                                     <div class="modalImages"><img id="donut"
@@ -136,7 +146,7 @@ function openShistpostModal() {
 
                                                 <div class="mt-4">
                                                     <button type="button" class="modalCloseBtn" @click="close3dModal">
-                                                        Fermer
+                                                        Close
                                                     </button>
                                                 </div>
                                             </DialogPanel>
@@ -172,7 +182,11 @@ function openShistpostModal() {
                                                     Twitch Streaming
                                                 </DialogTitle>
                                                 <div class="mt-2">
-                                                    <p class="text-base text-gray-100">Since 2021, I've been running a streaming channel with a current following of 300 dedicated fans. I consistently host streams twice a week, focusing primarily on video games, but occasionally spicing things up with talk shows featuring special guests!<br>
+                                                    <p class="text-base text-gray-100">Since 2021, I've been running a
+                                                        streaming channel with a current following of 300 dedicated
+                                                        fans. I consistently host streams twice a week, focusing
+                                                        primarily on video games, but occasionally spicing things up
+                                                        with talk shows featuring special guests!<br>
                                                         <i class="fa-brands fa-twitch text-xl text-purple-500"></i>
                                                     </p>
                                                     <div class="modalImages"><img id="stream"
@@ -180,13 +194,13 @@ function openShistpostModal() {
                                                             src="../assets/creations/stream.gif">
                                                     </div>
                                                     <a class="modalTwitchBtn " href="https://www.twitch.tv/mady2ouf"
-                                                        target="_blank">Lien du Twitch </a>
+                                                        target="_blank">Twitch Link</a>
                                                 </div>
 
                                                 <div class="mt-4">
                                                     <button type="button" class="modalCloseBtn"
                                                         @click="closeStreamModal">
-                                                        Fermer
+                                                        Close
                                                     </button>
                                                 </div>
                                             </DialogPanel>
@@ -220,7 +234,10 @@ function openShistpostModal() {
                                                     SHITPOST
                                                 </DialogTitle>
                                                 <div class="mt-2">
-                                                    <p class="text-base text-gray-100">One day while scrolling through Twitter, I came across an account named BeaufDelphine and I fell in love with their humour. So much I started doing my own shitposts creations. <br>
+                                                    <p class="text-base text-gray-100">One day while scrolling through
+                                                        Twitter, I came across an account named BeaufDelphine and I fell
+                                                        in love with their humour. So much I started doing my own
+                                                        shitposts creations. <br>
                                                         <i class="fa-brands fa-twitter"></i> <i
                                                             class="fa-brands fa-x-twitter"></i>
                                                     </p>
@@ -229,13 +246,13 @@ function openShistpostModal() {
                                                             src="../assets/creations/shitpost.jpg">
                                                     </div>
                                                     <a class="modalTwitterBtn " href="https://www.twitter.com/mady2ouf"
-                                                        target="_blank">Lien du compte </a>
+                                                        target="_blank">Twitter link</a>
                                                 </div>
 
                                                 <div class="mt-4">
                                                     <button type="button" class="modalCloseBtn"
                                                         @click="closeShistpostModal">
-                                                        Fermer
+                                                        Close
                                                     </button>
                                                 </div>
                                             </DialogPanel>
@@ -454,7 +471,7 @@ function openShistpostModal() {
     transform: scale(1);
     display: inline-block;
     cursor: pointer;
-    
+
 }
 
 .creation:after {
@@ -482,6 +499,6 @@ function openShistpostModal() {
     display: block;
     height: auto;
     border-radius: 50px;
-    
+
 }
 </style>

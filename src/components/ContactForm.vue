@@ -1,16 +1,16 @@
 <template>
   <div id="contactForm">
     <h1> Contact Form</h1>
-  <form ref="form" @submit.prevent="sendEmail">
-    <label>Name</label>
-    <input type="text" name="user_name">
-    <label>Email</label>
-    <input type="email" name="user_email">
-    <label>Message</label>
-    <textarea name="message"></textarea>
-    <input type="submit" value="Send">
-  </form>
-</div>
+    <form ref="form" @submit.prevent="sendEmail">
+      <label>Name</label>
+      <input type="text" name="user_name">
+      <label>Email</label>
+      <input type="email" name="user_email">
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <input type="submit" value="Send" @click="scrollOnTop()">
+    </form>
+  </div>
 </template>
 
 <script>
@@ -18,10 +18,13 @@ import emailjs from '@emailjs/browser';
 
 export default {
   methods: {
+    scrollOnTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
     sendEmail() {
       emailjs
-        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
-          publicKey: 'YOUR_PUBLIC_KEY',
+        .sendForm('service_vs8fof5', 'template_yert83j', this.$refs.form, {
+          publicKey: 'QolPIdDpvrrsd4WY-',
         })
         .then(
           () => {
@@ -37,22 +40,24 @@ export default {
 </script>
 
 <style scoped>
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 #contactForm {
   display: block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   border-radius: 5px;
   background-color: #2c2c2c;
   padding: 20px;
   width: 50%;
   margin-bottom: 30px;
-  color:white;
+  color: white;
   font-family: Raleway;
 }
 
-.container h1 {
+#contactForm h1 {
   font-size: 25px;
 }
 
@@ -60,7 +65,9 @@ label {
   float: left;
 }
 
-input[type=text], [type=email], textarea {
+input[type=text],
+[type=email],
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -69,6 +76,7 @@ input[type=text], [type=email], textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  color: #2c2c2c;
 }
 
 input[type=submit] {
