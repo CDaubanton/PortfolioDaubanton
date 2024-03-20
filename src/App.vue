@@ -7,18 +7,22 @@
 </script>
 
 <template>
-
+<!-- Le Header restera sur toutes les pages -->
   <header>
     <div class="wrapper">
+
       <nav id="navBar">
-        <a id="logo" v-on:click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
-        <a id="Home"><RouterLink to="/" >Home</RouterLink></a>
+        <a id="logo"  @click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
+        <a href="/#description" id="Home">Home</a>
+        <a href="/#carrousel" id="creations">Creations</a>
+        <a href="/#contactForm" id="contact">Contact</a>
       </nav>
     </div>
   </header>
+<!-- On utilise la vue du Router, quand on va sur une page autre que celle prévue par défaut, la page 404 apparait -->
+  <RouterView />
 
-  <RouterView id="content"/>
-
+  <!-- Le footer reste le même sur toutes les pages -->
   <footer>
     <ul id="social-icons">
             <li><a href="https://github.com/CDaubanton/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -41,6 +45,10 @@ header {
   width: 100%;
   position: fixed;
   background-color: black;
+}
+
+#Home {
+  cursor: pointer;
 }
 
 #navBar {
@@ -70,7 +78,7 @@ header {
 }
 
 #content {
-  padding-top: 102px;
+  margin-top: 102px;
 }
 
 footer {
