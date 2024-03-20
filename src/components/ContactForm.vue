@@ -30,8 +30,8 @@ export default {
   methods: {
     sendEmail() {
       emailjs
-        .sendForm('service_vs8fof5', 'template_yert83j', this.$refs.form, {
-          publicKey: 'QolPIdDpvrrsd4WY-',
+        .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
+          publicKey: 'YOUR_PUBLIC_KEY',
         })
         .then(
           () => {
