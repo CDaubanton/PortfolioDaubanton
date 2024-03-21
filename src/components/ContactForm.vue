@@ -1,4 +1,5 @@
 <template>
+  <!-- Création du formulaire de contact -->
   <div id="contactForm">
     <h1> Contact Form</h1>
   <form ref="form" @submit.prevent="sendEmail">
@@ -19,6 +20,7 @@
 
 
 <script>
+// On utilise EmailJS pour recevoir les mails directement depuis le formulaire
 import emailjs from '@emailjs/browser';
 
 export default {
@@ -28,6 +30,10 @@ export default {
    }
  },
   methods: {
+    scrollOnTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    // Il faut créer un compte sur https://dashboard.emailjs.com/sign-in, le tutoriel complet est sur https://www.emailjs.com/docs/tutorial/overview/.
     sendEmail() {
       emailjs
         .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, {
@@ -48,19 +54,21 @@ export default {
 </script>
 
 <style scoped>
+
 * {box-sizing: border-box; }
+
 
 #contactForm {
   scroll-behavior: smooth;
   display: block;
-  margin:auto;
+  margin: auto;
   text-align: center;
   border-radius: 5px;
   background-color: #2c2c2c;
   padding: 20px;
   width: 75%;
   margin-bottom: 30px;
-  color:white;
+  color: white;
   font-family: Raleway;
 }
 
@@ -72,7 +80,9 @@ label {
   float: left;
 }
 
-input[type=text], [type=email], textarea {
+input[type=text],
+[type=email],
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -81,7 +91,7 @@ input[type=text], [type=email], textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  color:#2c2c2c
+  color: #2c2c2c;
 }
 
 input[type=submit] {

@@ -1,7 +1,5 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router';
-  import PortfolioView from './views/PortfolioView.vue';
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
   function scrollOnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -9,7 +7,7 @@ import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 </script>
 
 <template>
-
+<!-- Le Header restera sur toutes les pages -->
   <header>
     <div class="wrapper">
       <nav id="navBar">
@@ -20,9 +18,10 @@ import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
       </nav>
     </div>
   </header>
+<!-- On utilise la vue du Router, quand on va sur une page autre que celle prévue par défaut, la page 404 apparait -->
+  <RouterView />
 
-  <PortfolioView id="content"/>
-
+  <!-- Le footer reste le même sur toutes les pages -->
   <footer>
     <ul id="social-icons">
             <li><a href="https://github.com/CDaubanton/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
