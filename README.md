@@ -1,16 +1,10 @@
-# vue-project
+# Portfolio Daubanton
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+This is my Portfolio created for an homework with VueJS. It uses headlessUI and TailwindCSS frameworks.
 
 ## Project Setup
+
+After cloning the repo :
 
 ```sh
 npm install
@@ -21,6 +15,13 @@ npm install
 ```sh
 npm run dev
 ```
+### EmailJS Config
+
+Make sure you followed this tutorial beforehand https://www.emailjs.com/docs/tutorial/overview/
+
+- Replace 'YOUR_SERVICE_ID' with your Service ID in your EmailJS Dashboard
+- Replace 'YOUR_TEMPLATE_ID' with your Template ID in your EmailJS Dashboard
+- Replace 'YOUR_PUBLIC_KEY' with your Public Key in your EmailJS Dashboard
 
 ### Compile and Minify for Production
 
