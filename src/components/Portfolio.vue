@@ -216,7 +216,7 @@ function openShistpostModal() {
                         <img id="stream" alt="Extrait de stream de Maddy" src="../assets/creations/stream.gif">
                     </div>
                 </div>
-                <div class="column ">
+                <div class="column" >
                     <div class="creation" @click="openShistpostModal">
                         <TransitionRoot appear :show="isShitpostOpen" as="template">
                             <Dialog as="div" @close="closeShistpostModal" class="relative z-10">
@@ -295,16 +295,16 @@ function openShistpostModal() {
     color: white;
     text-align: center;
     font-family: Raleway;
-
+    scroll-behavior: smooth;
 }
 
 #description h1 {
-    font-size: 35px;
+    font-size:3em;
     font-weight: bold;
 }
 
 #description h2 {
-    font-size: 25px;
+    font-size: 2em;
 }
 
 
@@ -314,6 +314,7 @@ function openShistpostModal() {
 }
 
 #face {
+
     width: 200px;
     height: auto;
     border-radius: 50px;
@@ -324,13 +325,12 @@ function openShistpostModal() {
     background-color: #141414;
     padding-left: 20%;
     padding-right: 20%;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
+    scroll-behavior: smooth;
 }
 
 #creations {
-    padding: 15px;
-
-
+    padding: 1.5rem;
 }
 
 .modalPanel {
@@ -354,7 +354,7 @@ function openShistpostModal() {
     left: 30px;
     z-index: 2;
     font-family: Raleway;
-    font-size: 30px;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -439,11 +439,11 @@ function openShistpostModal() {
 
 
 .modalImages img {
-    outline: auto 10px white;
+    border-radius: 1.5rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 500px;
-    width: auto;
+    height: auto;
+    width: 30em;
 }
 
 .row {
@@ -457,7 +457,7 @@ function openShistpostModal() {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    flex: 1;
+    flex:1;
 }
 
 .creation {
@@ -483,14 +483,14 @@ function openShistpostModal() {
     height: 100%;
     display: inline-block;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 90%);
-    border-radius: 50px;
+    border-radius: 1.5rem;
 }
 
 .creation:hover {
     transition: all .3s ease-in;
     transform: scale(1.2);
     z-index: 3;
-    border-radius: 50px;
+    border-radius: 1.5rem;
 }
 
 
@@ -498,7 +498,33 @@ function openShistpostModal() {
     width: 30em;
     display: block;
     height: auto;
-    border-radius: 50px;
+    border-radius: 1.5rem;
 
 }
+@media (max-width: 1000px) {
+
+#description h1 {
+    font-size:3em;
+    font-weight: bold;
+}
+
+#description h2 {
+    font-size: 1.5em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+#carrousel {
+    background-color: #141414;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 2em;
+}
+
+}
+
 </style>

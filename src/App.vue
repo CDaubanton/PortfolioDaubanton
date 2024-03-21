@@ -10,12 +10,11 @@
 <!-- Le Header restera sur toutes les pages -->
   <header>
     <div class="wrapper">
-
       <nav id="navBar">
-        <a id="logo"  @click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
-        <a href="/#description" id="Home">Home</a>
-        <a href="/#carrousel" id="creations">Creations</a>
-        <a href="/#contactForm" id="contact">Contact</a>
+        <a id="logo" @click="scrollOnTop"><img src="./assets/logo.png" alt="Logo de Minkavi Corp."></a>
+        <a href="#description" class="navBtn" id="Home">Home</a>
+        <a href="#carrousel" class="navBtn" id="creations">Creations</a>
+        <a href="#contactForm" class="navBtn" id="contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -120,5 +119,24 @@ footer p {
 
 #social-icons a:hover {
     opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+
+
+#navBar .navBtn {
+  display: none;
+}
+#logo img {
+  width: 75px;
+  height: auto;
+  cursor: pointer;
+}
+
+
+  footer p {
+  font-size: 1em;
+  font-weight: bold;
+}
 }
 </style>

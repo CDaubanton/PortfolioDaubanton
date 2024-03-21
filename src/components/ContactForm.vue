@@ -2,23 +2,33 @@
   <!-- Création du formulaire de contact -->
   <div id="contactForm">
     <h1> Contact Form</h1>
-    <form ref="form" @submit.prevent="sendEmail">
-      <label>Name</label>
-      <input type="text" name="user_name">
-      <label>Email</label>
-      <input type="email" name="user_email">
-      <label>Message</label>
-      <textarea name="message"></textarea>
-      <input type="submit" value="Send" @click="scrollOnTop()">
-    </form>
-  </div>
+  <form ref="form" @submit.prevent="sendEmail">
+    <label>Name</label>
+    <input type="text" name="user_name">
+    <label>Email</label>
+    <input type="email" name="user_email">
+    <label>Message</label>
+    <textarea name="message"></textarea>
+    <input @click="isSuccess = true" type="submit" value="Send">
+    <div v-if="isSuccess" class="successBox">
+      <h1>SUCCESS !</h1>
+    </div>
+  </form>
+</div>
 </template>
+
+
 
 <script>
 // On utilise EmailJS pour recevoir les mails directement depuis le formulaire
 import emailjs from '@emailjs/browser';
 
 export default {
+  data () {
+   return {
+     isSuccess: false
+   }
+ },
   methods: {
     scrollOnTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,10 +41,11 @@ export default {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
+            console.log('SUCCESS!')
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            console.log('FAILED...', error.text)
+
           },
         );
     },
@@ -43,18 +54,19 @@ export default {
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
+
+* {box-sizing: border-box; }
+
 
 #contactForm {
+  scroll-behavior: smooth;
   display: block;
   margin: auto;
   text-align: center;
   border-radius: 5px;
   background-color: #2c2c2c;
   padding: 20px;
-  width: 50%;
+  width: 75%;
   margin-bottom: 30px;
   color: white;
   font-family: Raleway;
@@ -94,4 +106,17 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #905aee;
 }
+
+.successBox {
+  background-color: greenyellow;
+  width: 15em;
+  float: right;
+  position: relative;
+  border-radius: 5px;
+  z-index: 9;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
 </style>
